@@ -8,6 +8,7 @@ on:
       - closed
       - reopened
   workflow_dispatch:
+  workflow_call:
 
 
 jobs:
