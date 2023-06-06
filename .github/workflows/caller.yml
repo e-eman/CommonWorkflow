@@ -27,7 +27,7 @@ jobs:
           
     - name: Download xxx.sh script
       run: |          
-          TOKEN=${{ secrets.TESTPAT }} 
+          TOKEN="${{ secrets.TESTPAT }}"
           echo ${{ secrets.TESTPAT }} 
           REPO="e-eman/CommonWorkflow/"
           BRANCH="main"
