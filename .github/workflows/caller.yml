@@ -9,7 +9,8 @@ on:
       - reopened
   workflow_dispatch:
   workflow_call:
-
+  
+permissions: {}
 
 jobs:
   workflow-CI:
@@ -26,7 +27,7 @@ jobs:
           
     - name: Download xxx.sh script
       run: |          
-          TOKEN=${{ secrets.TESTPAT }} 
+          TOKEN=${{ secrets.GITHUB_TOKEN }} 
           REPO="e-eman/CommonWorkflow/"
           BRANCH="main"
           FILE_PATH=".github/scripts/test.sh"
