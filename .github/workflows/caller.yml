@@ -1,0 +1,44 @@
+name: CommonWorkflow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - closed
+      - reopened
+  workflow_dispatch:
+
+
+jobs:
+  workflow-CI:
+    name: 'Workflow'
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    # https://github.com/marketplace/actions/checkout
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+          fetch-depth: 2 # To get full history of GIT repo
+          
+    - name: Download xxx.sh script
+      run: |          
+          TOKEN=""
+          REPO="e-eman/CommonWorkflow/"
+          BRANCH="main"
+          FILE_PATH=".github/scripts/test.sh"
+
+          # Make API request to get the file content
+          RESPONSE=$(curl -L -H "Accept: application/vnd.github.raw" -H "Authorization: Bearer $TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/$REPO/contents/$FILE_PATH?ref=$BRANCH)
+          
+          # Save the response content to a file
+          echo "$RESPONSE" > test.sh
+          
+          # Set execute permission
+          chmod +x test.sh
+          cat test.sh
+          echo "Start the script"
+          ./test.sh
+          
