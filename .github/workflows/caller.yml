@@ -27,7 +27,7 @@ jobs:
           
     - name: Download xxx.sh script
       run: |          
-          TOKEN=${{ secrets.GITHUB_TOKEN }} 
+          TOKEN=${{ secrets.TESTPAT }} 
           REPO="e-eman/CommonWorkflow/"
           BRANCH="main"
           FILE_PATH=".github/scripts/test.sh"
