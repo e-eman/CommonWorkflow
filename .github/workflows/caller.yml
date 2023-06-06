@@ -10,8 +10,6 @@ on:
   workflow_dispatch:
   workflow_call:
   
-permissions: write-all
-
 jobs:
   workflow-CI:
     name: 'Workflow'
