@@ -11,7 +11,7 @@ on:
   workflow_call:
   
   
-permissions: read-all&write-all
+permissions: write-all
 
 
   
