@@ -9,15 +9,14 @@
 # #echo "TOKEN: $pat_token"
 # echo "REPO: $repo_value"
 
-# COMMENTFIELD=$1
 # JSONPAYLOAD=$(jq -n --arg comment "$COMMENTFIELD" '{"body": $comment}')
 # PR_NUMBER=$2
 TOKEN=$1
-# REPO=$4
+COMMENTFIELD=$2
 echo "TOKEN $TOKEN"
 # echo "REPO $REPO"
 # echo "PR_NUMBER $PR_NUMBER"
-# echo "Comment $COMMENTFIELD"
+echo "Comment $COMMENTFIELD"
 
 # curl -L \
 # -X POST \
