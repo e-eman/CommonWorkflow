@@ -12,7 +12,7 @@
 COMMENTFIELD=$1
 JSONPAYLOAD=$(jq -n --arg comment "$COMMENTFIELD" '{"body": $comment}')
 PR_NUMBER=$2
-TOKEN="$3"
+TOKEN=$3
 REPO=$4
 echo "TOKEN $TOKEN"
 
