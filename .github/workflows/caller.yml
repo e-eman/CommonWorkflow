@@ -35,5 +35,9 @@ jobs:
           chmod +x test.sh
           cat test.sh
           echo "Start the script"
-          ./test.sh $REPO $TOKEN
+          COMMENT="This is a commment"
+          ./test.sh $COMMENT ${{ github.event.pull_request.number }} $TOKEN  ${{ github.repository }}
+          
+          
+          
           
