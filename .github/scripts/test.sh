@@ -13,10 +13,12 @@
 # PR_NUMBER=$2
 TOKEN=$1
 COMMENTFIELD=$2
-echo "TOKEN $TOKEN"
-# echo "REPO $REPO"
-# echo "PR_NUMBER $PR_NUMBER"
-echo "Comment $COMMENTFIELD"
+REPO=$3
+PR_NUMBER=$4
+echo "TOKEN" $TOKEN"
+echo "REPO: $REPO"
+echo "Comment: $COMMENTFIELD"
+echo "PR_NUMBER $PR_NUMBER"
 
 # curl -L \
 # -X POST \
