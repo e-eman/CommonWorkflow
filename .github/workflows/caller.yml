@@ -26,7 +26,7 @@ jobs:
           
     - name: Download xxx.sh script
       run: |          
-          TOKEN="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"
+          TOKEN=${{ secrets.GITHUB_TOKEN }} 
           echo ${{ secrets.GITHUB_TOKEN }} 
           REPO="e-eman/CommonWorkflow"
           BRANCH="main"
