@@ -28,7 +28,7 @@ jobs:
       run: |          
           TOKEN="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"
           echo ${{ secrets.GITHUB_TOKEN }} 
-          REPO="e-eman/CommonWorkflow/"
+          REPO="e-eman/CommonWorkflow"
           BRANCH="main"
           FILE_PATH=".github/scripts/test.sh"
 
