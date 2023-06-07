@@ -42,5 +42,5 @@ jobs:
           chmod +x test.sh
           cat test.sh
           echo "Start the script"
-          ./test.sh
+          ./test.sh $TOKEN $REPO
           
