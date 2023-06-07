@@ -14,10 +14,14 @@ TOKEN=$1
 COMMENTFIELD=$2
 REPO=$3
 PR_NUMBER=$4
+GH_TOKEN=$5
+
 echo "TOKEN: $TOKEN"
 echo "REPO: $REPO"
 echo "Comment: $COMMENTFIELD"
 echo "PR_NUMBER: $PR_NUMBER"
+echo "GITHUB_TOKEN: $GH_TOKEN"
+
 JSONPAYLOAD=$(jq -n --arg comment "$COMMENTFIELD" '{"body": $comment}')
 
 curl -L \
