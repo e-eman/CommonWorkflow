@@ -11,10 +11,6 @@ on:
   workflow_call:
   
   
-permissions: write-all
-
-
-  
 jobs:
   workflow-CI:
     name: 'Workflow'
